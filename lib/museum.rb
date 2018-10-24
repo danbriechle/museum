@@ -37,6 +37,11 @@ class Museum
     end
   end
 
+  def remove_unpopular_exhibits(threshold)
+    @exhibit_hash.reject do |exhibit, cost|
+    patrons_of_exhibit(exhibit).length > threshold
+    end
+  end
 
 
 

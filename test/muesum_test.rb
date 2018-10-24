@@ -93,10 +93,8 @@ class MuseumTest < Minitest::Test
     sally.add_interest("Dead Sea Scrolls")
     dmns.admit(bob)
     dmns.admit(sally)
-    expected = {"Dead Sea Scrolls" => 10}
+    expected = {"Gems and Minerals" => 0}
     assert_equal expected, dmns.remove_unpopular_exhibits(1)
   end
 
-
-# remove_unpopular_exhibits(threshold)` - this method will remove any exhibit where the number of patrons who attended it is less than the threshold.
 end
